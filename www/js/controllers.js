@@ -5,16 +5,32 @@ angular.module('starter.controllers', [])
 
 .controller('ListCtrl', function($scope) {
   $scope.viewModel = {};
+  $scope.viewModel.items = [ { id: 0 },
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+    { id: 7 },
+    { id: 8 },
+    { id: 9 },
+    { id: 10 }];
   $scope.viewModel.showDelete = false;
   $scope.viewModel.showReorder = false;
   
   $scope.showDeleteButton = function(){
     $scope.viewModel.showDelete = !$scope.viewModel.showDelete;
-  }
+  };
   
   $scope.showReorderButton = function(){
     $scope.viewModel.showReorder = !$scope.viewModel.showReorder; 
-  }
+  };
+  
+  $scope.moveItem = function(item, fromIndex, toIndex) {
+    $scope.viewModel.items = $scope.viewModel.items.splice(fromIndex, 1);
+    $scope.viewModel.items = $scope.viewModel.items.splice(toIndex, 0, item);
+  };
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
@@ -29,7 +45,7 @@ angular.module('starter.controllers', [])
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
-  }
+  };
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
