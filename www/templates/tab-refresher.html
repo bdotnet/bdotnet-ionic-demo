@@ -1,5 +1,8 @@
 <ion-view title="Pull to refresh demo">
 	<ion-content>
-		
+		<ion-refresher pulling-text="Pull to refresh..." on-refresh="RefreshData()"></ion-refresher>
+		<ion-list>
+			<ion-item ng-repeat="item in viewModel.items">Item {{item.id}}</ion-item>
+		</ion-list>
 	</ion-content>
 </ion-view>

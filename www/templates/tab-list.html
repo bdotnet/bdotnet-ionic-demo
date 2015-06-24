@@ -1,15 +1,15 @@
 <ion-view title="Ion List demo">
 	<ion-nav-buttons side="right">
-		<button class="button button-icon icon ion-ios-trash-outline" ng-click="showDeleteButton()"></button>
-		<button class="button button-icon icon ion-navicon" ng-click="showReorderButton()"></button>
+		<button class="button button-icon icon icon-small ion-ios-trash-outline" ng-click="showDeleteButton()"></button>
+		<button class="button button-icon icon icon-small ion-navicon" ng-click="showReorderButton()"></button>
 	</ion-nav-buttons>
 	<ion-content>
 		<ion-list show-delete="viewModel.showDelete" show-reorder="viewModel.showReorder">
 			<ion-item ng-repeat="item in viewModel.items">Item {{item.id}}
 				<ion-delete-button class="ion-minus-circled" ng-click="viewModel.items.splice($index, 1)"></ion-delete-button>
 				<ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
-				<ion-option-button class="button-assertive">Delete</ion-option-button>
-				<ion-option-button class="button-stable">More</ion-option-button>
+				<ion-option-button class="button-assertive" ng-click="viewModel.items.splice($index, 1)">Delete</ion-option-button>
+				<ion-option-button class="button-balanced" ng-click="showActionSheet()">More</ion-option-button>
 			</ion-item>
 		</ion-list>
 	</ion-content>

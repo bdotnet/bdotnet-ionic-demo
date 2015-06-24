@@ -42,7 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/dash',
     views: {
       'tab-js': {
-        templateUrl: 'templates/tab-dash.html',
+        templateUrl: 'templates/tab-js.html',
         controller: 'DashCtrl'
       }
     }
@@ -53,7 +53,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-js': {
         templateUrl: 'templates/tab-refresher.html',
-        // controller: 'RefreshCtrl'
+        controller: 'RefreshCtrl'
       }
     }
   })
