@@ -1,0 +1,19 @@
+<ion-view title="Ionic Forms Demo">
+	<ion-content>
+		<ion-item class="item-divider">Preferences</ion-item>
+		<ion-toggle ng-model="viewModel.isSubscribed">Subscribe to Email</ion-toggle>
+		<div ng-show="viewModel.isSubscribed">
+		<ion-item class="item-divider">Technologies Interested</ion-item>
+		<ion-checkbox>Asp.Net</ion-checkbox>
+		<ion-checkbox>Ionic</ion-checkbox>
+		<ion-checkbox>VS TACO</ion-checkbox>
+		<ion-checkbox>NTVS</ion-checkbox>
+		</div>
+		<div ng-show="viewModel.isSubscribed">
+		<ion-item class="item-divider">Email Preference</ion-item>
+		<ion-radio>Daily </ion-radio>
+		<ion-radio>Weekly</ion-radio>
+		<ion-radio>Hourly</ion-radio>
+		</div>
+	</ion-content>
+</ion-view>

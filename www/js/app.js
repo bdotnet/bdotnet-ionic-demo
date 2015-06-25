@@ -1,3 +1,4 @@
+/// <reference path="../../typings/cordova/cordova.d.ts"/>
 // Ionic Starter App
 
 // angular.module is a global place for creating, registering and retrieving Angular modules
@@ -67,6 +68,35 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+  
+   .state('tab.header', {
+    url: '/header',
+    views: {
+      'tab-js': {
+        templateUrl: 'templates/tab-header.html',
+        controller: 'ListCtrl'
+      }
+    }
+  })
+  
+  
+  .state('tab.form', {
+    url: '/form',
+    views: {
+      'tab-js': {
+        templateUrl: 'templates/tab-form.html'
+      }
+    }
+  })
+  
+  .state('tab.slidebox', {
+    url: '/slidebox',
+    views: {
+      'tab-js': {
+        templateUrl: 'templates/tab-slidebox.html'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',
@@ -87,12 +117,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.services', {
+    url: '/services',
     views: {
       'tab-services': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+        templateUrl: 'templates/tab-services.html'
       }
     }
   });

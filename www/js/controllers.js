@@ -2,6 +2,11 @@
 angular.module('starter.controllers', [])
 
   .controller('DashCtrl', function ($scope) { })
+  
+   .controller('FormsCtrl', function ($scope) {
+     $scope.viewModel = {};
+     $scope.viewModel.isSubscribed = false;
+    })
 
   .controller('ListCtrl', function ($scope,$ionicActionSheet,$timeout) {
   $scope.viewModel = {};
@@ -27,7 +32,7 @@ angular.module('starter.controllers', [])
   $scope.moveItem = function (item, fromIndex, toIndex) {
     $scope.viewModel.items.splice(fromIndex, 1);
     $scope.viewModel.items.splice(toIndex, 0, item);
-  }
+  };
   
   // Triggered on a button click, or some other target
  $scope.showActionSheet = function() {
@@ -102,7 +107,7 @@ angular.module('starter.controllers', [])
     var randomNumber = Math.floor(Math.random()*100);
     $scope.viewModel.items.push({"id":randomNumber});
     $scope.$broadcast('scroll.refreshComplete');
-  }
+  };
 })
   .controller('AccountCtrl', function ($scope) {
   $scope.settings = {
