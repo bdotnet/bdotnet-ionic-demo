@@ -1,14 +1,34 @@
 <ion-view title="Grid demo">
-	<ion-content>
+	<ion-content class="weather-image">
 		<div class="row">
-			<div class ="col">
-				Name
+			<h3 class="center weather-text"> Bangalore </h3>
+		</div>
+		<div class="row">
+		<h4 class="center weather-text"> Slight Showers </h4>
+		</div>
+		<div class="row">
+		<h5 class="degree-alignment weather-text"> 25° C </h5>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col"><p class="weather-text"></p></div>
+			<div class="col"><p class="weather-text">Min</p></div>
+			<div class="col"><p class="weather-text">Max</p></div>
+			<!--<div class="col"><p class="weather-text">Humidity</p></div>-->
+		</div>
+		<div class="row" ng-repeat="weather in viewModel.weatherData">
+			<div class="col">
+				<p class="weather-text">{{weather.Day}}</p>
 			</div>
-			<div class ="col">
-				Company
+			<div class="col">
+				<p class="weather-text">{{weather.Min}}° C</p> 
 			</div>
-			<div class ="col">
-				Technology
+			<div class="col">
+				<p class="weather-text">{{weather.Max}}° C</p>
 			</div>
+			<!--<div class="col">
+				<p class="weather-text">{{weather.Humidity}}</p>
+			</div>-->
+		<div>
 	</ion-content>
 </ion-view>

@@ -1,1 +1,17 @@
 /* Empty. Add your own CSS if you like */
+.weather-image{
+	background-image: url(../img/rain.jpg)
+}
+
+.weather-text{
+	color: white
+}
+
+.center{
+	padding-left: 40%;
+	text-align: center
+}
+.degree-alignment{
+	padding-left: 50%;
+	text-align: center
+}

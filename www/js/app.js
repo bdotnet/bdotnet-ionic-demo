@@ -106,6 +106,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     
+    .state('tab.forms', {
+      url: '/forms',
+      views: {
+        'tab-css': {
+          templateUrl: 'templates/tab-forms.html'
+        }
+      }
+    })
+    
+    .state('tab.cards', {
+      url: '/cards',
+      views: {
+        'tab-css': {
+          templateUrl: 'templates/tab-cards.html'
+        }
+      }
+    })
+    
     .state('tab.button', {
       url: '/button',
       views: {
@@ -119,7 +137,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/grid',
       views: {
         'tab-css': {
-          templateUrl: 'templates/tab-grid.html'
+          templateUrl: 'templates/tab-grid.html',
+          controller : 'GridsCtrl'
         }
       }
     })

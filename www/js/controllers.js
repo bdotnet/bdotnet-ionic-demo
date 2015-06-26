@@ -7,6 +7,29 @@ angular.module('starter.controllers', [])
      $scope.viewModel = {};
      $scope.viewModel.isSubscribed = false;
     })
+    
+    .controller('GridsCtrl', function ($scope) {
+     $scope.viewModel = {};
+     $scope.viewModel.weatherData = [{
+       "Day" : "Today",
+       "Min" : "18",
+       "Max" : "26",
+       "Humidity" : "2%"
+     },
+     {
+       "Day" : "Tomorrow",
+       "Min" : "19",
+       "Max" : "28",
+       "Humidity" : "4%"
+     },
+     {
+       "Day" : "Monday",
+       "Min" : "20",
+       "Max" : "30",
+       "Humidity" : "4%"
+     }
+     ];
+    })
 
   .controller('ListCtrl', function ($scope,$ionicActionSheet,$timeout) {
   $scope.viewModel = {};
